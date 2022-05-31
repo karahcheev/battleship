@@ -1,5 +1,6 @@
 import getch as gh
 
+
 class Cursor:
     def __init__(self):
         self.y = 0
@@ -18,13 +19,13 @@ class Cursor:
 
     def update_coordinates(self):
         key = self._get_key_from()
-        if key == 'right':
+        if key == 'right' and self.x < 9:
             self.x += 1
-        elif key == 'left':
+        elif key == 'left' and self.x > 0:
             self.x -= 1
-        elif key == 'up':
+        elif key == 'up' and self.y > 0:
             self.y -= 1
-        elif key == 'down':
+        elif key == 'down' and self.y < 9:
             self.y += 1
         else:
             pass

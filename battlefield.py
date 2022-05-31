@@ -4,7 +4,6 @@ from cursor import Cursor
 class Battlefield:
     def __init__(self):
         self.battlefield = [['.'] * 10 for y in range(10)]
-        self.length_field = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         self.X = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К']
         self.cursor = Cursor()
 
@@ -19,8 +18,3 @@ class Battlefield:
                     print(self.battlefield[x][y], end=' ')
                 if x == 9:
                     print('')
-
-
-
-
-
